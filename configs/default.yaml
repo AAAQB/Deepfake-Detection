@@ -1,0 +1,35 @@
+data:
+  raw_root: data_raw
+  processed_root: data_processed
+  classes: [real, filter, deepfake]
+  image_size: 224
+  frame_interval: 5
+  fallback_full_frame: true
+
+model:
+  kind: efficientnet_b4
+  pretrained: true
+  dropout: 0.4
+  hidden_size: 512
+  lstm_layers: 2
+  lstm_dropout: 0.3
+  bidirectional: true
+
+training:
+  seed: 42
+  train_fraction: 0.70
+  val_fraction: 0.15
+  test_fraction: 0.15
+  batch_size: 32
+  temporal_batch_size: 4
+  sequence_length: 16
+  sequence_stride: 4
+  workers: 2
+  epochs: 40
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  label_smoothing: 0.1
+  early_stopping_patience: 8
+  checkpoint_root: checkpoints
+  log_root: logs
+

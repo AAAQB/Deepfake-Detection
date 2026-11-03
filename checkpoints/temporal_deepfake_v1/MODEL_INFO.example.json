@@ -1,0 +1,24 @@
+{
+  "expected_filename": "best_model.pt",
+  "git_tracked": false,
+  "size_bytes": 551958607,
+  "sha256": "07972af133a44c5d39c5685ee160bb77cc6e29b3d23ead1a31b63112bcd04dd3",
+  "checkpoint_format": "legacy_timm_efficientnet_b4_lstm",
+  "mode": "temporal",
+  "saved_epoch_zero_based": 2,
+  "classes": ["real", "filter", "deepfake"],
+  "reported_metrics_unverified": {
+    "accuracy": 0.8752424046541694,
+    "macro_f1": 0.8761175179119253,
+    "weighted_f1": 0.8748413908383467,
+    "auc": 0.9510290627116551
+  },
+  "local_sample_smoke_test": {
+    "dataset": "15 labeled videos under sample_data/video, one 16-frame sequence per video",
+    "face_detector": "MediaPipe model_selection=1",
+    "accuracy": 0.4666666666666667,
+    "macro_f1": 0.35555555555555557,
+    "confusion_matrix": [[5, 0, 0], [2, 0, 3], [3, 0, 2]],
+    "warning": "Compatibility smoke test only; sampling and preprocessing may differ from the original training run."
+  }
+}

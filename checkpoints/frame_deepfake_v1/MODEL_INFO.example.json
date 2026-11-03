@@ -1,0 +1,24 @@
+{
+  "expected_filename": "best_model.pt",
+  "git_tracked": false,
+  "size_bytes": 211768249,
+  "sha256": "96ccce87a61b726740d317a086b11198d044abc1f29f8895eff3b74d6ce15e0f",
+  "checkpoint_format": "legacy_timm_efficientnet_b4",
+  "mode": "frame",
+  "saved_epoch_zero_based": 11,
+  "classes": ["real", "filter", "deepfake"],
+  "reported_metrics_unverified": {
+    "accuracy": 0.9011925042589438,
+    "macro_f1": 0.8907843165268908,
+    "weighted_f1": 0.900381633847655,
+    "auc": 0.9753234536232916
+  },
+  "local_sample_smoke_test": {
+    "dataset": "60 labeled images under sample_data/image",
+    "face_detector": "MediaPipe model_selection=1",
+    "accuracy": 0.35,
+    "macro_f1": 0.20321637426900585,
+    "confusion_matrix": [[1, 19, 0], [0, 20, 0], [3, 17, 0]],
+    "warning": "Compatibility smoke test only; the sample set may not match the original training distribution."
+  }
+}
